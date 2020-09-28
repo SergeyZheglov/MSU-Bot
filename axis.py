@@ -188,6 +188,16 @@ async def cmds(ctx, *, section=None):
             await ctx.send(embed=reply)
 
 
+@client.command()
+@commands.has_permissions(administrator=True)
+async def say(ctx, *, text):
+    reply = discord.Embed(
+        description=text,
+        color=ctx.guild.me.color
+    )
+    await ctx.send(embed=reply)
+    await ctx.message.delete()
+
 #----------------------------------------------+
 #                   Errors                     |
 #----------------------------------------------+
