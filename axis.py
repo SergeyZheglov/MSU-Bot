@@ -7,7 +7,7 @@ import os, datetime
 #                Connections                 |
 #--------------------------------------------+
 bot_token = str(os.environ.get("bot_token"))
-prefix = ".."
+prefix = "m!"
 client = commands.Bot(command_prefix=prefix)
 client.remove_command("help")
 
