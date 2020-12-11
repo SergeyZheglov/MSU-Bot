@@ -8,7 +8,8 @@ import os, datetime
 #--------------------------------------------+
 bot_token = str(os.environ.get("bot_token"))
 prefix = "m!"
-client = commands.Bot(command_prefix=prefix)
+intents = discord.Intents.all()
+client = commands.Bot(command_prefix=prefix, intents=intents)
 client.remove_command("help")
 
 
